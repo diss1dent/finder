@@ -35,9 +35,10 @@ export class VimeoService {
 
         this.http.post(VIMEO_API_URL, params.join('&'), {headers: headers})
             .map((response:any) => {
+                const mapresults = (response._body && JSON.parse(response._body));
                 const allResults = {
                     availableResults: 0,
-                    searchResults: response.json().body.data.map((item:any) => {
+                    searchResults: mapresults && mapresults.body && mapresults.body.data && mapresults.body.data.map((item:any) => {
                         return {
                             id: item.link.split('https://vimeo.com/')[1],
                             kind: 'vimeo',
@@ -47,6 +48,7 @@ export class VimeoService {
                         };
                     })
                 };
+                allResults.searchResults = allResults.searchResults || [];
                 console.log('Vimeoresult->', allResults.searchResults);
                 return allResults;
             })
