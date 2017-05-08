@@ -6,7 +6,7 @@ import {CurrentSearch} from '../models/current-search.model';
 import {Store} from "@ngrx/store";
 import ACTIONTYPES from "../actions/types";
 
-const VIMEO_API_URL         = '/vimeo.php';
+const VIMEO_API_URL         = '/backend/vimeo.php';
 const VIMEO_APP_ID          = '101369';
 
 @Injectable()
@@ -72,7 +72,7 @@ export class VimeoService {
 
         headers.append('Content-Type', 'application/X-www-form-urlencoded');
 
-        return this.http.post('/vimeo.php', searchterm, {headers: headers})
+        return this.http.post('/backend/vimeo.php', searchterm, {headers: headers})
             .map((response) => response.json())
             .subscribe((result) => {
                 this.store.dispatch({

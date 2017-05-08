@@ -37,7 +37,10 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: 'backend' }
+            { from: 'backend', to: 'backend' }
+        ]),
+        new CopyWebpackPlugin([
+            { from: 'vendor', to: 'backend/vendor' }
         ]),
         new ChunkWebpack({
             filename: 'vendor.bundle.js',

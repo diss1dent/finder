@@ -27,7 +27,7 @@ export class TwitterService {
 
 		headers.append('Content-Type', 'application/X-www-form-urlencoded');
 
-		return this.http.post('/twitter.php', searchterm, {headers: headers})
+		return this.http.post('/backend/twitter.php', searchterm, {headers: headers})
 			.map((res) => {
 
 				let result;
@@ -65,7 +65,7 @@ export class TwitterService {
 
 		headers.append('Content-Type', 'application/X-www-form-urlencoded');
 
-		return this.http.post('/twitter.php', searchterm, {headers: headers})
+		return this.http.post('/backend/twitter.php', searchterm, {headers: headers})
 			.map((response) => response.json())
 			.subscribe((result) => {
 				this.store.dispatch({

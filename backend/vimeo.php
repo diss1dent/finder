@@ -1,7 +1,7 @@
 <?php
 
-if (file_exists('../vendor/vimeo/vimeo-api/autoload.php')) {
-	require_once('../vendor/vimeo/vimeo-api/autoload.php');
+if (file_exists('./vendor/vimeo/vimeo-api/autoload.php')) {
+	require_once('./vendor/vimeo/vimeo-api/autoload.php');
 } else {
 	die ( 'Vimeo not found. Please contact developers');
 }
