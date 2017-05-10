@@ -1,0 +1,23 @@
+<div class="post-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="post-title">My Comments</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content search-content">
+    <div class="container">
+        <div *ngIf="comments?.length > 0">
+            <ul class="comments-list">
+                <li *ngFor="let comment of comments" class="comment">
+                    <span class="comment-user">{{comment.login}}</span>
+                    <a class="comment-link" [routerLink]="['/post', comment.postType, comment.postID]" class="comment-user"> on {{comment.postType + '/' + comment.postID}}</a>
+                    <span class="comment-time">{{comment.time | date:'medium'}}</span>
+                    <p class="comment-text">{{comment.text}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

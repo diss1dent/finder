@@ -1,0 +1,43 @@
+.comments {
+  &-title {
+    margin: 0 0 10px 0;
+  }
+  &-section {
+    textarea {
+      width: 100%;
+      min-height: 160px;
+      border-radius: 4px;
+      background-color: $gray-light;
+      border: 1px solid $gray;
+      padding: 8px 16px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.comment {
+  margin-bottom: 20px;
+  &-user {
+    font-size: 16px;
+    padding: 0 5px 5px 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+  }
+  &-text {
+    border-radius: 4px;
+    background-color: $gray-light;
+    border: 1px solid $gray;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  &-time {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+  }
+}

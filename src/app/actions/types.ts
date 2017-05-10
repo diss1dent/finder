@@ -4,7 +4,9 @@ const ACTIONTYPES = {
     searchtext: 'SearchBox:TEXT_CHANGED',
     post: 'PostLoaded',
     isInBookmark: 'BookMarkChanged',
-    progressBar: 'progressBar'
+    progressBar: 'progressBar',
+    commentsLoad: 'commentsLoad',
+    commentsAdd: 'commentsAdd'
 };
 
 export default ACTIONTYPES;

@@ -27,6 +27,3 @@ $ npm start
 ```
 > Vimeo and Twitter API needs server communication, so local server with PHP > 5.5 needed
 
-# TODO List:
-  - deleting bookmarks
-  - post comments

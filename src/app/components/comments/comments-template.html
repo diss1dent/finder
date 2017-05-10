@@ -1,0 +1,17 @@
+<div *ngIf="comments?.length > 0">
+    <h2 class="comments-title">Comments</h2>
+    <ul class="comments-list">
+        <li *ngFor="let comment of comments" class="comment">
+            <span class="comment-user">{{comment.login}}</span><span class="comment-time">{{comment.time | date:'medium'}}</span>
+            <p class="comment-text">{{comment.text}}</p>
+        </li>
+    </ul>
+</div>
+
+<h2 class="comments-title">Add new comment</h2>
+<div class="comments-section">
+    <div class="comments-add-comment-box">
+        <textarea [(ngModel)]="currentComment"></textarea>
+    </div>
+    <button (click)="addNewComment()" class="button" >Add comment</button>
+</div>

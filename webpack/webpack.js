@@ -37,9 +37,7 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: 'backend', to: 'backend' }
-        ]),
-        new CopyWebpackPlugin([
+            { from: 'backend', to: 'backend' },
             { from: 'vendor', to: 'backend/vendor' }
         ]),
         new ChunkWebpack({

@@ -5,7 +5,7 @@ import { Store } from "@ngrx/store";
 import * as _ from 'lodash';
 
 import ACTIONTYPES from "../actions/types";
-import { User } from "../models/user-model";
+import {User} from "../models/user-model";
 import {Post} from "../models/search-result.model";
 
 @Injectable()
@@ -13,7 +13,7 @@ export class AuthService implements CanActivate {
 
     private authUrl = 'api/users';  // URL to web api
     private headers = new Headers({'Content-Type': 'application/json'});
-    private users = [
+    private users:User[] = [
             {
                 "id": 0,
                 "login": "Artem",
@@ -147,6 +147,10 @@ export class AuthService implements CanActivate {
                 isLoggedIn : false
             }
         });
+    }
+
+    getCurrentUser():string {
+        return JSON.parse(localStorage.getItem('isLoggedSession')).login
     }
 
     registerUser(data:any): boolean {
