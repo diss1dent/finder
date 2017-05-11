@@ -10,9 +10,10 @@
   - Authorization / Registration
   - Search in Youtube, Twitter, Vimeo using their API
   - Navigation to post
-  - Storing Post as bookmark
+  - Storing Post as bookmark / Bookmarks page
+  - Commenting posts / Comments Page
   
-Project is written using Webpack, Angular 2, Typescript, Bootstrap and Redux pattern using `@ngrx/store` as component communication
+Project is written using Webpack, Angular 2, Typescript, Bootstrap and Redux pattern using `@ngrx/store` as component communication. Localstorage is temporary used instead of real BD
 
 # Live
 
